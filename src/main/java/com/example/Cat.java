@@ -3,11 +3,10 @@ package com.example;
 import java.util.List;
 
 public class Cat {
+    private Predator predator;  // меняем тип на Predator
 
-    Predator predator;
-
-    public Cat(Feline feline) {
-        this.predator = feline;
+    public Cat(Predator predator) {  // меняем параметр на Predator
+        this.predator = predator;
     }
 
     public String getSound() {
@@ -17,5 +16,4 @@ public class Cat {
     public List<String> getFood() throws Exception {
         return predator.eatMeat();
     }
-
 }
